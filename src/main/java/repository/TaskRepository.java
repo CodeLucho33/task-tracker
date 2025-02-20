@@ -49,11 +49,21 @@ public class TaskRepository {
     }
 
     // Agregar una nueva tarea
+    // Agregar una nueva tarea con ID autoincremental
     public void addTask(Task task) {
         List<Task> tasks = getAllTasks();
+
+        // Obtener el ID más alto de las tareas existentes y sumar 1
+        int nextId = tasks.stream()
+                .mapToInt(Task::getId)
+                .max()
+                .orElse(0) + 1;
+        task.setId(nextId);
+
         tasks.add(task);
         saveTasks(tasks);
     }
+
 
     // Buscar una tarea por ID
     public Optional<Task> getTaskById(int id) {

@@ -32,7 +32,7 @@ public class TaskCLI {
                     System.out.print("Ingresa el estado inicial (todo, in-progress, done): ");
                     String status = scanner.nextLine();
 
-                    taskController.createTask(description, status);
+                    taskController.createTask();
                     break;
                 case "2":
                     System.out.print("Ingresa el ID de la tarea a actualizar: ");
@@ -44,7 +44,7 @@ public class TaskCLI {
                     System.out.print("Ingresa el nuevo estado (todo, in-progress, done): ");
                     String newStatus = scanner.nextLine();
 
-                    taskController.updateTask(id, newDescription, newStatus);
+                    taskController.updateTask();
                     break;
                 case "3":
                     running = false;
