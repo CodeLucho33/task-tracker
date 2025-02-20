@@ -10,6 +10,9 @@ public class Task {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    public Task() {
+        // Constructor por defecto necesario para Jackson
+    }
     // Constructor
     public Task(int id, String description, String status, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
