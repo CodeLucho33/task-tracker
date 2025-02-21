@@ -71,22 +71,19 @@ public class TaskController {
        if (status.equals("in-progress") ) {
            Task newTask = new Task(0, description, status, LocalDateTime.now(), LocalDateTime.now());
            taskRepository.addTask(newTask);
-           System.out.println("¡Tarea creada exitosamente!" + newTask.getDescription() +" AS" + newTask.getStatus());
+           System.out.println("¡Tarea creada exitosamente!" +":**"+ newTask.getDescription() +"  STATUS " + newTask.getStatus());
        }else if (status.equals("done") ) {
            Task newTask = new Task(0, description, status, LocalDateTime.now(), LocalDateTime.now());
            taskRepository.addTask(newTask);
-           System.out.println("¡Tarea creada exitosamente!" + newTask.getDescription() +" AS" + newTask.getStatus());
+           System.out.println("¡Tarea creada exitosamente!"+":**"+ newTask.getDescription() +" STATUS " + newTask.getStatus()) ;
        }else if (status.equals("todo") ) {
            Task newTask = new Task(0, description, status, LocalDateTime.now(), LocalDateTime.now());
            taskRepository.addTask(newTask);
-           System.out.println("¡Tarea creada exitosamente!" + newTask.getDescription() +" AS" + newTask.getStatus());
+           System.out.println("¡Tarea creada exitosamente!" +":**"+ newTask.getDescription() +" STATUS " + newTask.getStatus());
        }else {
            System.out.println("El estado no es correcto.");
        }
 
-
-
-        System.out.println("NO SE PUEDE CREAR");
     }
 
 

@@ -34,4 +34,16 @@
   "status" : "in-progress",
   "createdAt" : "2025-02-21T08:44:52.172597643",
   "updatedAt" : "2025-02-21T08:55:39.856032777"
+}, {
+  "id" : 9,
+  "description" : "Tarea de prueba",
+  "status" : "todo",
+  "createdAt" : "2025-02-21T09:28:05.937439156",
+  "updatedAt" : "2025-02-21T09:28:05.937557644"
+}, {
+  "id" : 12,
+  "description" : "La ultima tarea de prueba",
+  "status" : "done",
+  "createdAt" : "2025-02-21T09:34:11.378965067",
+  "updatedAt" : "2025-02-21T09:34:11.379083491"
 } ]
