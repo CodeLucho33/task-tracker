@@ -19,7 +19,8 @@ public class TaskController {
         System.out.println("1. Crear tarea");
         System.out.println("2. Actualizar tarea");
         System.out.println("3. Listar tareas");
-        System.out.println("4. Salir");
+        System.out.println("4. Eliminar tarea");
+        System.out.println("5. Salir");
         System.out.print("Selecciona una opción: ");
     }
 
@@ -89,5 +90,18 @@ public class TaskController {
         );
     }
 
+public void deleteTask() {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Ingresa el ID de la tarea a eliminar: ");
+
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        Optional<Task> optionalTask = taskRepository.getTaskById(id);
+        if (optionalTask.isEmpty()) {
+            System.out.println("La tarea no existe");
+        }else {
+            taskRepository.deleteTask(id);
+        }
+}
 }

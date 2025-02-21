@@ -21,7 +21,8 @@ public class Main {
                 case 1 -> taskController.createTask();
                 case 2 -> taskController.updateTask();
                 case 3 -> taskController.listTasks(); // Nueva opción
-                case 4 -> exit = true;
+                case 4 -> taskController.deleteTask();
+                case 5 -> exit = true;
                 default -> System.out.println("Opción no válida.");
             }
         }

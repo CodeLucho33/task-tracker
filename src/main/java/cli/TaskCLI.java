@@ -20,6 +20,7 @@ public class TaskCLI {
             System.out.println("1. Crear nueva tarea");
             System.out.println("2. Actualizar tarea");
             System.out.println("3. Salir");
+            System.out.println("4. Eliminar tarea");
             System.out.print("Selecciona una opción: ");
 
             String option = scanner.nextLine();
@@ -50,9 +51,14 @@ public class TaskCLI {
                     running = false;
                     System.out.println("Saliendo...");
                     break;
+                    case "4":
+                        taskController.deleteTask();
+                        break;
                 default:
                     System.out.println("Opción no válida. Intenta de nuevo.");
             }
+
+
 
         }
 
