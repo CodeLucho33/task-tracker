@@ -1,6 +1,4 @@
-¡Entiendo, vamos a dejarlo bien pulido! Aquí tienes una versión mejorada del README para tu proyecto **Task Tracker CLI**:
 
----
 
 # 🚀 Task Tracker CLI
 Task Tracker CLI es una aplicación de línea de comandos construida en Java para gestionar tus tareas de forma sencilla y eficiente. ¡Organiza tus pendientes directamente desde la terminal y mantén el control de tus actividades!
