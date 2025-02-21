@@ -12,7 +12,7 @@ Task Tracker CLI es una aplicación de línea de comandos construida en Java par
 - **Marcar tareas**: Cambia el estado de una tarea a `in-progress` o `done` de manera rápida.
 - **Eliminar tareas**: Elimina una tarea especificada por su ID.
 - **Persistencia en JSON**: Las tareas se guardan en un archivo `tasks.json`, lo que permite mantener los datos entre sesiones.
-
+- **Gestión de dependecias con MAVEN**: json databind y json objectMapper
 ---
 
 ## 🚀 Instalación y Ejecución
