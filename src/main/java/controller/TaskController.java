@@ -68,12 +68,25 @@ public class TaskController {
 
         System.out.print("Ingresa el estado de la tarea (todo, in-progress, done): ");
         String status = scanner.nextLine();
+       if (status.equals("in-progress") ) {
+           Task newTask = new Task(0, description, status, LocalDateTime.now(), LocalDateTime.now());
+           taskRepository.addTask(newTask);
+           System.out.println("¡Tarea creada exitosamente!" + newTask.getDescription() +" AS" + newTask.getStatus());
+       }else if (status.equals("done") ) {
+           Task newTask = new Task(0, description, status, LocalDateTime.now(), LocalDateTime.now());
+           taskRepository.addTask(newTask);
+           System.out.println("¡Tarea creada exitosamente!" + newTask.getDescription() +" AS" + newTask.getStatus());
+       }else if (status.equals("todo") ) {
+           Task newTask = new Task(0, description, status, LocalDateTime.now(), LocalDateTime.now());
+           taskRepository.addTask(newTask);
+           System.out.println("¡Tarea creada exitosamente!" + newTask.getDescription() +" AS" + newTask.getStatus());
+       }else {
+           System.out.println("El estado no es correcto.");
+       }
 
-        // Crear la tarea sin ID, ya que se asigna automáticamente en el repositorio
-        Task newTask = new Task(0, description, status, LocalDateTime.now(), LocalDateTime.now());
-        taskRepository.addTask(newTask);
 
-        System.out.println("¡Tarea creada exitosamente!");
+
+        System.out.println("NO SE PUEDE CREAR");
     }
 
 
