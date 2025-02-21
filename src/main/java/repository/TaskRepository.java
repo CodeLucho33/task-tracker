@@ -105,5 +105,28 @@ public class TaskRepository {
                 .collect(Collectors.toList());
     }
 
+    // Marcar tarea como in-progress
+    public void markTaskInProgress(int id) {
+        List<Task> tasks = getAllTasks();
+        tasks.stream()
+                .filter(task -> task.getId() == id)
+                .forEach(task -> {
+                    task.setStatus("in-progress");
+                    task.setUpdatedAt(LocalDateTime.now());
+                });
+        saveTasks(tasks);
+    }
+
+    // Marcar tarea como done
+    public void markTaskDone(int id) {
+        List<Task> tasks = getAllTasks();
+        tasks.stream()
+                .filter(task -> task.getId() == id)
+                .forEach(task -> {
+                    task.setStatus("done");
+                    task.setUpdatedAt(LocalDateTime.now());
+                });
+        saveTasks(tasks);
+    }
 
 }

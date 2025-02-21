@@ -1,9 +1,9 @@
 [ {
   "id" : 3,
   "description" : "El primer proyecto backend",
-  "status" : "todo",
+  "status" : "done",
   "createdAt" : "2025-02-20T17:53:07.846231985",
-  "updatedAt" : "2025-02-20T17:53:07.846367974"
+  "updatedAt" : "2025-02-21T08:55:57.976819944"
 }, {
   "id" : 4,
   "description" : "Terminar cursos Alura",
@@ -31,7 +31,7 @@
 }, {
   "id" : 8,
   "description" : "Terminar proyecto tracker ",
-  "status" : "done",
+  "status" : "in-progress",
   "createdAt" : "2025-02-21T08:44:52.172597643",
-  "updatedAt" : "2025-02-21T08:44:52.172765118"
+  "updatedAt" : "2025-02-21T08:55:39.856032777"
 } ]

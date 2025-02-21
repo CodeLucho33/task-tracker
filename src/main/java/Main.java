@@ -25,6 +25,8 @@ public class Main {
                 case 5 -> taskController.listTasksByStatus("todo");
                 case 6 -> taskController.listTasksByStatus("in-progress");
                 case 7 -> taskController.listTasksByStatus("done");
+                case 8 -> taskController.markTaskInProgress();
+                case 9 -> taskController.markTaskDone();
                 case 0 -> exit = true;
                 default -> System.out.println("Opción no válida.");
             }

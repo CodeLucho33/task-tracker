@@ -121,5 +121,41 @@ public void deleteTask() {
             }
         }
     }
+    // Marcar tarea como in-progress
+    public void markTaskInProgress() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el ID de la tarea a marcar como 'in-progress': ");
+        int id = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el buffer
+
+        Optional<Task> optionalTask = taskRepository.getTaskById(id);
+        if (optionalTask.isEmpty()) {
+            System.out.println("No se encontró ninguna tarea con el ID especificado.");
+            return;
+        }
+
+        taskRepository.markTaskInProgress(id);
+        System.out.println("¡Tarea marcada como 'in-progress' exitosamente!");
+    }
+
+    // Marcar tarea como done
+    public void markTaskDone() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el ID de la tarea a marcar como 'done': ");
+        int id = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el buffer
+
+        Optional<Task> optionalTask = taskRepository.getTaskById(id);
+        if (optionalTask.isEmpty()) {
+            System.out.println("No se encontró ninguna tarea con el ID especificado.");
+            return;
+        }
+
+        taskRepository.markTaskDone(id);
+        System.out.println("¡Tarea marcada como 'done' exitosamente!");
+    }
+
 
 }
