@@ -22,7 +22,10 @@ public class Main {
                 case 2 -> taskController.updateTask();
                 case 3 -> taskController.listTasks(); // Nueva opción
                 case 4 -> taskController.deleteTask();
-                case 5 -> exit = true;
+                case 5 -> taskController.listTasksByStatus("todo");
+                case 6 -> taskController.listTasksByStatus("in-progress");
+                case 7 -> taskController.listTasksByStatus("done");
+                case 0 -> exit = true;
                 default -> System.out.println("Opción no válida.");
             }
         }

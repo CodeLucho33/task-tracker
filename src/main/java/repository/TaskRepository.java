@@ -12,13 +12,18 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class TaskRepository {
     private static final String FILE_PATH = "tasks.json";
     private final ObjectMapper objectMapper;
+    private List<Task> tasks;
+
+
 
 
     public TaskRepository() {
+        this.tasks = new ArrayList<>();  // Inicializa la lista vacía
         this.objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
@@ -91,4 +96,14 @@ public class TaskRepository {
         tasks.removeIf(task -> task.getId() == id);
         saveTasks(tasks);
     }
+
+    public List<Task>  getTasksByStatus(String status) {
+        // Leer todas las tareas desde el archivo JSON
+        List<Task> tasks = getAllTasks();
+        return tasks.stream()
+                .filter(task -> task.getStatus().equalsIgnoreCase(status))
+                .collect(Collectors.toList());
+    }
+
+
 }

@@ -20,7 +20,12 @@ public class TaskController {
         System.out.println("2. Actualizar tarea");
         System.out.println("3. Listar tareas");
         System.out.println("4. Eliminar tarea");
-        System.out.println("5. Salir");
+        System.out.println("5. Listar tareas pendientes (todo)");
+        System.out.println("6. Listar tareas en progreso (in-progress)");
+        System.out.println("7. Listar tareas completadas (done)");
+        System.out.println("8. Marcar tarea como en progreso");
+        System.out.println("9. Marcar tarea como completada");
+        System.out.println("0. Salir");
         System.out.print("Selecciona una opción: ");
     }
 
@@ -104,4 +109,17 @@ public void deleteTask() {
             taskRepository.deleteTask(id);
         }
 }
+    public void listTasksByStatus(String status) {
+        List<Task> filteredTasks = taskRepository.getTasksByStatus(status);
+
+        if (filteredTasks.isEmpty()) {
+            System.out.println("No hay tareas con el estado: " + status);
+        } else {
+            System.out.println("\n==== Tareas en estado: " + status + " ====");
+            for (Task task : filteredTasks) {
+                System.out.println(task);
+            }
+        }
+    }
+
 }
