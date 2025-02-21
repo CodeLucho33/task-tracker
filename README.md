@@ -51,9 +51,9 @@ task-tracker-cli/
 │   ├── model/                # Modelos de datos
 │   └── repository/           # Acceso y manejo de datos
 │
-├── lib/                     # Librerías externas (Jackson)
-│   ├── jackson-core-2.15.2.jar
-│   └── jackson-databind-2.15.2.jar
+├── pom.xml
+│  
+│   
 │
 └── tasks.json               # Archivo de almacenamiento de tareas
 ```
