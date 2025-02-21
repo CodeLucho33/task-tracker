@@ -1,0 +1,31 @@
+[ {
+  "id" : 3,
+  "description" : "El primer proyecto backend",
+  "status" : "todo",
+  "createdAt" : "2025-02-20T17:53:07.846231985",
+  "updatedAt" : "2025-02-20T17:53:07.846367974"
+}, {
+  "id" : 4,
+  "description" : "Terminar cursos Alura",
+  "status" : "in-progress",
+  "createdAt" : "2025-02-21T08:02:08.692006647",
+  "updatedAt" : "2025-02-21T08:02:08.692121759"
+}, {
+  "id" : 5,
+  "description" : "Barrer",
+  "status" : "in-progress",
+  "createdAt" : "2025-02-21T08:02:24.682253136",
+  "updatedAt" : "2025-02-21T08:02:24.682318916"
+}, {
+  "id" : 6,
+  "description" : "Trapear",
+  "status" : "in-progress",
+  "createdAt" : "2025-02-21T08:02:41.0112459",
+  "updatedAt" : "2025-02-21T08:02:41.011306789"
+}, {
+  "id" : 7,
+  "description" : "Conseguir trabajo",
+  "status" : "in-progress",
+  "createdAt" : "2025-02-21T08:02:55.723641027",
+  "updatedAt" : "2025-02-21T08:02:55.723682824"
+} ]
